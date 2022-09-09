@@ -45,6 +45,6 @@ jobs:
       - name: Nx Integrity Check
         run: npx nx workspace-lint
       - name: Unit Tests
-        run: npx nx affected --target=test
+        run: npx nx affected --target=test --output-style=stream
       - name: End to End Tests
         run: npx nx affected --target e2e
