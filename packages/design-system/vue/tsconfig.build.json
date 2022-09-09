@@ -1,0 +1,18 @@
+{
+  "extends": "@eternagame/tsconfig/tsconfig.web.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "index.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "src/**/__tests__/**/*"
+  ]
+}

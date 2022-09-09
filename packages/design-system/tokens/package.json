@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "@eternagame/design-system-tokens",
+  "description": "Design tokens for the Eterna design system",
+  "version": "1.0.0-dev",
+  "license": "SEE LICENSE IN LICENSE"
+}

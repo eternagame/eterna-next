@@ -7,7 +7,7 @@ module.exports = {
     .readFileSync(join(__dirname, './.gitignore'), 'utf8')
     .split('\n'),
   extends: [
-    'plugin:@eternagame/typescript',
+    'plugin:@eternagame/vue3-typescript',
     'plugin:@eternagame/nx-typescript',
   ],
 };

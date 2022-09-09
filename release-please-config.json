@@ -8,7 +8,12 @@
     {
       "type": "linked-versions",
       "group-name": "all",
-      "components": []
+      "components": [
+        "design-system-vue",
+        "design-system-tokens",
+        "api",
+        "frontend-web"
+      ]
     }
   ],
   "pull-request-title-pattern": "chore(repo): Release latest on ${branch}",
@@ -45,5 +50,18 @@
       "hidden": false
     }
   ],
-  "packages": {}
+  "packages": {
+    "packages/design-system/vue": {
+      "component": "design-system-vue"
+    },
+    "packages/design-system/tokens": {
+      "component": "design-system-tokens"
+    },
+    "packages/api": {
+      "component": "api"
+    },
+    "packages/frontend/web": {
+      "component": "frontend-web"
+    }
+  }
 }

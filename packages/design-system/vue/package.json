@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "@eternagame/design-system-vue",
+  "description": "Vue implementation of the Eterna design system",
+  "version": "1.0.0-dev",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build": "vue-tsc --noEmit --pretty -p tsconfig.build.json && vite build",
+    "build:watch": "vite build --mode development",
+    "test": "cypress run --component",
+    "lint": "eslint .",
+    "test:ui": "cypress open --component"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "dependencies": {
+    "vue": "^3.2.39"
+  }
+}

@@ -8,22 +8,38 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@eternagame/cypress-utils": "^1.0.0-dev.178",
     "@eternagame/eslint-plugin": "^2.0.0-dev.178",
     "@eternagame/lint-staged-utils": "^1.0.0-dev.178",
     "@eternagame/nx-plugin": "^2.0.0-dev.178",
+    "@eternagame/nx-spawn": "^2.0.0-dev.178",
+    "@eternagame/tsconfig": "^2.0.0-dev.178",
+    "@eternagame/vite-utils": "^2.0.0-dev.178",
     "@nrwl/eslint-plugin-nx": "^14.7.3",
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.16",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
+    "cypress": "^10.7.0",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-vue": "^9.4.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "nx": "^14.7.3"
+    "node-dev": "^7.4.3",
+    "nx": "^14.7.3",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.1",
+    "vue-eslint-parser": "^9.1.0",
+    "vue-tsc": "^0.40.13"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/design-system/*",
+    "packages/frontend/*"
   ],
   "license": "SEE LICENSE IN LICENSE"
 }

@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@eternagame/frontend-web",
+  "description": "Website frontend for the Eterna citizen science project",
+  "version": "1.0.0-dev",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build": "vue-tsc --noEmit --pretty -p tsconfig.build.json && vite build",
+    "test": "cypress run --component",
+    "lint": "eslint .",
+    "start": "vite preview",
+    "dev": "nx-spawn _dev",
+    "_dev": "vite",
+    "test:ui": "cypress open --component"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "dependencies": {
+    "vue": "^3.2.39",
+    "vue-router": "^4.1.5"
+  }
+}
