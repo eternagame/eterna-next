@@ -20,7 +20,6 @@ jobs:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3
-      - run: echo "NX_BASE=57009d8974a1f39920eef24c05be5e0d1e8c3831" >> $GITHUB_ENV
       - name: Install cypress dependencies
         run: sudo apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
       - name: Use Node.js ${{ matrix.node-version }}
@@ -54,6 +53,6 @@ jobs:
       - name: Nx Integrity Check
         run: npx nx workspace-lint
       - name: Unit Tests
-        run: npx nx affected --target=test --output-style=stream
+        run: npx nx affected --target=test
       - name: End to End Tests
         run: npx nx affected --target e2e
