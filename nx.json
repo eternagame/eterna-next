@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "extends": "@eternagame/nx-plugin/preset.json",
+  "npmScope": "eternagame",
+  "generators": {
+    "@eternagame/nx-plugin:license-package": {
+      "license": "EternaNoncommercial",
+      "copyrightHolder": "Eterna Commons"
+    },
+    "@eternagame/nx-plugin:package": {
+      "publish": "private"
+    },
+    "@eternagame/nx-plugin:release-package": {}
+  }
+}

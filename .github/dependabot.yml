@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    labels:
+      - 'type: dependencies'
+      - 'scope: repo'
+    commit-message:
+      prefix: deps(repo)
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    labels:
+      - 'type: dependencies'
+      - 'scope: repo'
+    commit-message:
+      prefix: deps(repo)
+    # Security updates only
+    open-pull-requests-limit: 0

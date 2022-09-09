@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "group-name": "all",
+      "components": []
+    }
+  ],
+  "pull-request-title-pattern": "chore(repo): Release latest on ${branch}",
+  "group-pull-request-title-pattern": "chore(repo): Release latest on ${branch}",
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "Features and Enhancements",
+      "hidden": false
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes",
+      "hidden": false
+    },
+    {
+      "type": "perf",
+      "section": "Performance Improvements",
+      "hidden": false
+    },
+    {
+      "type": "revert",
+      "section": "Reverts",
+      "hidden": false
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": false
+    },
+    {
+      "type": "deps",
+      "section": "Dependencies",
+      "hidden": false
+    }
+  ],
+  "packages": {}
+}

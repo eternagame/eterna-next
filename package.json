@@ -1,0 +1,29 @@
+{
+  "name": "@eternagame/eternagame",
+  "description": "The Eterna citizen science platform for RNA design",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint-core": "eslint --ignore-pattern packages/ .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@eternagame/eslint-plugin": "^2.0.0-dev.178",
+    "@eternagame/lint-staged-utils": "^1.0.0-dev.178",
+    "@eternagame/nx-plugin": "^2.0.0-dev.178",
+    "@nrwl/eslint-plugin-nx": "^14.7.3",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "nx": "^14.7.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "SEE LICENSE IN LICENSE"
+}
