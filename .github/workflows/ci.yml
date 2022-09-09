@@ -20,6 +20,7 @@ jobs:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3
+      - run: echo "NX_BASE=57009d8974a1f39920eef24c05be5e0d1e8c3831" >> $GITHUB_ENV
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
