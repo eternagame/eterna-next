@@ -48,6 +48,10 @@ jobs:
         run: npx nx affected --target=lint
       - name: Nx Integrity Check
         run: npx nx workspace-lint
+      - name: Set up xvfb for Cypress
+        run: |
+          Xvfb -screen 0 1024x768x24 :99 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
       - name: Unit Tests
         run: npx nx affected --target=test
       - name: End to End Tests
