@@ -48,6 +48,18 @@ Run `npx nx lint <package-name>` to run linting for a package via [ESLint](https
 Run `npx nx lint <package-name> --fix` to run linting with automatic fixes
 <!-- End managed by @eternagame/nx-plugin - commands/lint -->
 
+### How to start the application Locally
+* `docker compose up`
+
+API: http://localhost:3000
+OpenAPI: https://localhost:3000/api
+Frontend: http://localhost:3001
+Database Admin: http://localhost:8080
+
+### Command Line interface Locally
+(This provides NestJS, NodeJS, NPX environment to install packages, run migrations, etc)
+* `docker compose run api sh`
+
 <!-- Managed by @eternagame/nx-plugin - commands/test -->
 ### Testing
 
