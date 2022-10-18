@@ -9,7 +9,7 @@ services:
     volumes:
       - ./packages/api:/usr/src/app
       - /usr/src/app/node_modules
-    command: npm run dev
+    command: npm run build:watch
     ports:
       - "3000:3000"
     depends_on:

@@ -1,6 +1,6 @@
 FROM --platform=linux/x86_64 node:18-alpine AS development
 WORKDIR /usr/src/app
-RUN npm i -g @nestjs/cli
+RUN npm i -g @nestjs/cli vite
 COPY --chown=node:node package*.json ./
 RUN npm ci
 COPY --chown=node:node . .
