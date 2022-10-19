@@ -15,6 +15,16 @@ services:
     depends_on:
       - db
 
+  frontend-web:
+    build:
+      dockerfile: Dockerfile
+      context: ./packages/frontend/web
+    volumes:
+      - ./packages/frontend/web:/usr/src/app
+      - /usr/src/app/node_modules
+    command: vite
+    ports:
+      - "5173:5173"
 
   db:
     image: postgres
@@ -27,3 +37,17 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+    environment:
+      - DEBUG=1
+      - PERSISTENCE=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - SERVICES=s3,sqs
+    volumes:
+      - ./packages/localstack:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

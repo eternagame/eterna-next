@@ -53,7 +53,7 @@ Run `npx nx lint <package-name> --fix` to run linting with automatic fixes
 
 API: http://localhost:3000
 OpenAPI: https://localhost:3000/api
-Frontend: http://localhost:3001
+Frontend: http://localhost:5173
 Database Admin: http://localhost:8080
 
 ### Command Line interface Locally

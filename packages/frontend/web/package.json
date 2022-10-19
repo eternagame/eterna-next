@@ -21,5 +21,9 @@
   "dependencies": {
     "vue": "^3.2.39",
     "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@eternagame/tsconfig": "^2.0.0-dev.178",
+    "@eternagame/vite-utils": "^2.0.0-dev.178"
   }
 }
