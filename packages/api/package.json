@@ -22,6 +22,8 @@
     "require": "./dist/index.cjs"
   },
   "dependencies": {
+    "@eternagame/tsconfig": "^2.0.0-dev.178",
+    "@eternagame/vite-utils": "^2.0.0-dev.178",
     "@nestjs/common": "^9.0.11",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.11",
@@ -30,9 +32,5 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "reflect-metadata": "^0.1.13"
-  },
-  "devDependencies": {
-    "@eternagame/tsconfig": "^2.0.0-dev.178",
-    "@eternagame/vite-utils": "^2.0.0-dev.178"
   }
 }
