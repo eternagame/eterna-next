@@ -1,4 +1,4 @@
-# @eternagame/eternagame
+# @eternagame/eterna
 
 The Eterna citizen science platform for RNA design
 
