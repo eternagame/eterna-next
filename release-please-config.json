@@ -62,6 +62,9 @@
     },
     "packages/frontend/web": {
       "component": "frontend-web"
+    },
+    "packages/design-system/token-transformer": {
+      "component": "design-system-token-transformer"
     }
   }
 }
