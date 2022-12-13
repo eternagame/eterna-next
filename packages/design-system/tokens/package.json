@@ -3,5 +3,15 @@
   "name": "@eternagame/design-system-tokens",
   "description": "Design tokens for the Eterna design system",
   "version": "1.0.0-dev",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build": "node ../token-transformer/dist/index.js tokens.json ./dist/tokens.css",
+    "build:watch": "chokidar \"tokens.json\" -c \"nx run build\""
+
+  },
+  "nx": {
+    "implicitDependencies": [
+      "design-system-token-transformer"
+    ]
+  }
 }
