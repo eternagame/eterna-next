@@ -20,14 +20,15 @@ function parseTokensFromJSON(object: Record<string, any>, parent = '', tokens: R
   Object.keys(object).forEach((key) => {
     // If the object has a value property, it's a token definition
     if (object[key].value) {
-      const tokenName = (parent !== '') ? `-${parent}-${key}` : `-${parent}-${key}`;
+      const tokenName = (parent !== '') ? `--${parent}-${key}` : `--${key}`;
       const tokenValue = object[key].value;
       // eslint-disable-next-line no-param-reassign
       tokens[tokenName] = tokenValue;
     } else {
       // If the object doesn't have a value property, it's a token group,
       // so parse that object for token definitions
-      parseTokensFromJSON(object[key], `${parent}-${key}`, tokens);
+      const parentPrefix = parent ? `${parent}-` : '';
+      parseTokensFromJSON(object[key], `${parentPrefix}${key}`, tokens);
     }
   });
   return tokens;
