@@ -5,9 +5,8 @@
   "version": "1.0.0-dev",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "build": "node ../token-transformer/dist/index.js tokens.json ./dist/tokens.css",
+    "build": "node ../token-transformer tokens.json ./dist/tokens.css",
     "build:watch": "chokidar \"tokens.json\" -c \"nx run build\""
-
   },
   "nx": {
     "implicitDependencies": [

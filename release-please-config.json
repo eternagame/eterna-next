@@ -11,6 +11,7 @@
       "components": [
         "design-system-vue",
         "design-system-tokens",
+        "design-system-token-transformer",
         "api",
         "frontend-web"
       ]
