@@ -58,6 +58,7 @@ jobs:
             notebooks
             puzzles
             rewards
+            rna-lib
             rna-metrics
             rna-vis
             tools
