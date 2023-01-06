@@ -11,7 +11,8 @@
     "start": "vite preview",
     "dev": "nx-spawn _dev",
     "_dev": "vite",
-    "test:ui": "cypress open --component"
+    "test:ui": "nx-spawn test:_ui",
+    "test:_ui": "cypress open --component"
   },
   "type": "module",
   "exports": {

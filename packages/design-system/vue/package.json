@@ -9,7 +9,8 @@
     "build:watch": "vite build --mode development",
     "test": "cypress run --component",
     "lint": "eslint .",
-    "test:ui": "cypress open --component"
+    "test:ui": "nx-spawn test:_ui",
+    "test:_ui": "cypress open --component"
   },
   "type": "module",
   "main": "./dist/index.js",
