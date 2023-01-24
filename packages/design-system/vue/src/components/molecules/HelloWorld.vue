@@ -15,3 +15,11 @@ defineProps({
 
 const emit = defineEmits<(e: 'buttonClicked') => void>();
 </script>
+
+<style>
+@import url("@/assets/style.css");
+
+button {
+  background-color: var(--blue-50);
+}
+</style>

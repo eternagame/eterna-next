@@ -25,6 +25,8 @@ import '@/assets/style.css';
 // eslint-plugin-import has a false positive here
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { mount } from 'cypress/vue';
+import { h } from 'vue';
+import ActionBar from './ActionBar.vue';
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
@@ -39,7 +41,12 @@ declare global {
   }
 }
 
-Cypress.Commands.add('mount', mount);
+// Use this to mount without ActionBar wrapper component
+// Cypress.Commands.add('mount', mount);
+
+// Augment mount command with an ActionBar wrapper component
+// The ActionBar is where we place app-level settings like theme
+Cypress.Commands.add('mount', (component, ...args) => mount(() => h(ActionBar, {}, () => h(component, args[0].props, args[0].slots)), ...args));
 
 // Example use:
 // cy.mount(MyComponent)

@@ -1,0 +1,73 @@
+:root {
+  /** Animation **/
+  --transition-duration: 300ms;
+  --transition-easing: ease;
+
+  /** Border **/
+
+  /** Box Shadow **/
+
+  /** Breakpoints **/
+
+  /** Colors **/
+  --color--primary: var(--blue-40);
+  --color--secondary: var(--aqua-40);
+  --color--info: var(--support-info);
+  --color--warning: var(--support-warning);
+  --color--danger: var(--support-error);
+  --color--success: var(--support-success);
+  --color--red: var(--red-50);
+  --color--orange: var(--orange-40);
+  --color--yellow: var(--yellow-20);
+  --color--green: var(--green-50);
+  --color--teal: var(--aqua-50);
+  --color--blue: var(--blue-60);
+  --color--purple: var(--purple-60);
+  --color--pink: var(--pink-50);
+  --color--white: var(--neutrals-white);
+  --color--black: var(--neutrals-black);
+  --color--gray: var(--gray-60);
+  --color--light: var(--gray-10);
+  --color--dark: var(--gray-90);
+
+  /** Core **/
+  --body--background--light: var(--gray-05);
+  --body--color--light: var(--gray-80);
+  --body--background--dark: var(--gray-90);
+  --body--color--dark: var(--gray-10);
+  --body--background: var(--body--background--light);
+  --body--color: var(--body--color--light);
+
+  /** Grid **/
+
+  /** Gutter **/
+  --gutter: var(--space-md);
+  /* --gutter-xs: var(--space-xs); */
+  /* --gutter-sm: var(--space-sm); */
+  /* --gutter-md: var(--space-md); */
+  /* --gutter-lg: var(--space-lg); */
+  /* --gutter-xl: var(--space-xl); */
+  /* --gutter-xxl: var(); */
+
+  /** Images **/
+  
+  /** Print **/
+
+  /** Ratios **/
+  --scale-ratio: var(--scale-ratio--major-third);
+  --scale-ratio-secondary: var(--scale-ratio--augmented-fourth); 
+
+  /** Sizes **/
+
+  /** Spacing **/
+
+  /** Typography **/
+  --font-family-primary--base: var(--fontFamily);
+  --font-size--xs: var(--text-xs);
+  --font-size--sm: var(--text-sm);
+  --font-size--md: var(--text-md);
+  --font-size--lg: var(--text-lg);
+  --font-size--xl: var(--text-xl);
+
+  /** Z-Index **/
+}
