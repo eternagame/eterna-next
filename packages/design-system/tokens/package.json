@@ -12,5 +12,8 @@
     "implicitDependencies": [
       "design-system-token-transformer"
     ]
+  },
+  "exports": {
+    "./tokens.css": "./dist/tokens.css"
   }
 }

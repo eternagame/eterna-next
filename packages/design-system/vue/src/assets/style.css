@@ -1,8 +1,9 @@
+@import url('@eternagame/design-system-tokens/tokens.css');
+@import url('@inkline/inkline/inkline.css');
+@import url('./inklineOverrides.css');
+
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
 }
