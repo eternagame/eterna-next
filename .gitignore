@@ -63,3 +63,6 @@ migrations.json
 
 # Persistent Postgres DB
 .postgres
+
+# Persistent Localstack
+.localstack

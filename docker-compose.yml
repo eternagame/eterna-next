@@ -26,6 +26,5 @@ services:
       - DOCKER_HOST=unix:///var/run/docker.sock
       - SERVICES=s3,sqs
     volumes:
-      - ./packages/localstack:/var/lib/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./.localstack:/var/lib/localstack
 
