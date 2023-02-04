@@ -2,6 +2,12 @@
 
 The Eterna citizen science platform for RNA design
 
+### To start 3rd party Services Locally
+* `docker compose up`
+
+* Postgres DB (Database Admin: http://localhost:8080)
+* Localstack (S3, SQS)
+
 <!-- Managed by @eternagame/nx-plugin - prologue -->
 Interested in development? Join the discussion on the Eterna Discord!
 
