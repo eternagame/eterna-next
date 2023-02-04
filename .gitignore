@@ -60,3 +60,9 @@ Thumbs.db
 
 # Nx migrations (Managed by @eternagame/nx-plugin)
 migrations.json
+
+# Persistent Postgres DB
+.postgres
+
+# Persistent Localstack
+.localstack
