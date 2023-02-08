@@ -1,11 +1,11 @@
 <template>
   <header class="actionBar">
     <div class="actionBar-themeSelect">
-      <span>Theme: </span>
+      <label for="themeSwitcher">Theme: </label>
       <select
         id="themeSwitcher"
         name="themeSwitcher"
-        @:change="changeTheme"
+        @change="changeTheme"
       >
         <option value="dark">
           Dark
@@ -26,6 +26,8 @@ function changeTheme(event: Event) {
   const theme = (event.target as HTMLInputElement).value;
   document.querySelector('html')?.setAttribute('class', theme);
 }
+// Initialize page with default theme
+document.querySelector('html')?.setAttribute('class', 'dark');
 </script>
 
 <style>
