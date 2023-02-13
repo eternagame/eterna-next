@@ -24,22 +24,43 @@ import '@/assets/style.css';
 
 // eslint-plugin-import has a false positive here
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { mount } from 'cypress/vue';
+import { CyMountOptions, mount, VueTestUtils } from 'cypress/vue';
+import { Component, h } from 'vue';
+import ActionBar from './ActionBar.vue';
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
 // Alternatively, can be defined in cypress/support/component.d.ts
 // with a <reference path="./component" /> at the top of your spec.
+
 /* eslint-disable @typescript-eslint/no-namespace */
 declare global {
   namespace Cypress {
     interface Chainable {
-      mount: typeof mount
+      mount: <Comp extends Component<P>, P = object>(
+        component: Comp,
+        options: CyMountOptions<P>
+      ) => Cypress.Chainable<{
+        wrapper: InstanceType<typeof VueTestUtils.VueWrapper>
+        component: InstanceType<typeof VueTestUtils.VueWrapper>['vm']
+      }>
     }
   }
 }
 
-Cypress.Commands.add('mount', mount);
+// Use this to mount without ActionBar wrapper component
+// Cypress.Commands.add('mount', mount);
+
+// Augment mount command with an ActionBar wrapper component
+// The ActionBar is where we place app-level settings like theme
+Cypress.Commands.add('mount', <Comp extends Component<P>, P = object>(
+  component: Comp,
+  opts: CyMountOptions<P>,
+) => {
+  const originalComponent: Component = () => h(component, opts.props, opts.slots);
+  const wrappedMountFn: Component = () => h(ActionBar, originalComponent);
+  return mount(wrappedMountFn, opts);
+});
 
 // Example use:
-// cy.mount(MyComponent)
+// cy.mount(MyComponent, { props: {...}, })
