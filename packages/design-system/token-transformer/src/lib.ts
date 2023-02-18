@@ -29,7 +29,7 @@ function parseTokensFromJSON(object: Record<string, any>, parent = '', tokens: R
       if (typeof tokenValue === 'object') {
         for (const property of Object.keys(tokenValue)) {
           // eslint-disable-next-line no-param-reassign
-          tokens[`${tokenName}-${property}`] = tokenValue[key];
+          tokens[`${tokenName}-${property}`] = tokenValue[property];
         }
       } else {
         // eslint-disable-next-line no-param-reassign
