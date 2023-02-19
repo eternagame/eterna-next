@@ -1,5 +1,5 @@
-@import url('@eternagame/design-system-tokens/tokens.css');
 @import url('@inkline/inkline/inkline.css');
+@import url('@eternagame/design-system-tokens/tokens.css');
 @import url('./inklineOverrides.css');
 
 body {
