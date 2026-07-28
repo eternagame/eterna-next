@@ -15,10 +15,16 @@
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./src/assets/style.css"
   },
   "dependencies": {
+    "@eternagame/design-system-tokens": "^1.0.0-dev",
+    "@inkline/inkline": "^3.2.0",
+    "sass": "^1.57.1",
     "vue": "^3.2.45"
   }
 }

@@ -1,0 +1,201 @@
+:root {
+  /** Animation **/
+  --transition-duration: 300ms;
+  --transition-easing: ease;
+
+  /** Border **/
+  /*  --border-radius and --border-width are overwritten by our tokens
+  */
+  --border-style: solid;
+  --border-color-light: var(--gray-20);
+  --border-color-dark: var(--gray-70);
+  --border-color: var(--border-color--light);
+
+  /** Box Shadow **/
+  --box-shadow-offset-x: var(--shadow-default-x);
+  --box-shadow-offset-y: var(--shadow-default-y);
+  --box-shadow-blur-radius: var(--shadow-default-blur);
+  --box-shadow-spread-radius: var(--shadow-default-spread);
+  --box-shadow-color: var(--shadow-default-color);
+  --box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur-radius) var(--box-shadow-spread-radius) var(--box-shadow-color);
+
+  /** Breakpoints **/
+  /*  Inkline uses Sass mixins + Sass variables for their media queries
+      We use CSS variables alone
+  */
+  --breakpoints-xs: 0;
+  --breakpoints-sm: 600px;
+  --breakpoints-md: 900px;
+  --breakpoints-lg: 1200px;
+  --breakpoints-xl: 1800px;
+
+  /** Colors **/
+  --color--primary: var(--blue-40);
+  --color--secondary: var(--aqua-40);
+  --color--info: var(--support-info);
+  --color--warning: var(--support-warning);
+  --color--danger: var(--support-error);
+  --color--success: var(--support-success);
+  --color--red: var(--red-50);
+  --color--orange: var(--orange-40);
+  --color--yellow: var(--yellow-20);
+  --color--green: var(--green-50);
+  --color--teal: var(--aqua-50);
+  --color--blue: var(--blue-60);
+  --color--purple: var(--purple-60);
+  --color--pink: var(--pink-50);
+  --color--white: var(--neutrals-white);
+  --color--black: var(--neutrals-black);
+  --color--gray: var(--gray-60);
+  --color--light: var(--gray-10);
+  --color--dark: var(--gray-90);
+  --contrast-color-for-light-background: var(--gray-90);
+  --contrast-color-for-dark-background: var(--neutrals-white);
+
+  /** Core **/
+  --body--background--light: var(--gray-05);
+  --body--color--light: var(--gray-80);
+  --body--background--dark: var(--gray-90);
+  --body--color--dark: var(--gray-10);
+  --body--background: var(--body--background--light);
+  --body--color: var(--body--color--light);
+
+  /** Grid **/
+  /*  Inkline uses a Sass mixin defined grid system
+      We use Flexbox and CSS Grid
+  */
+
+  /** Gutter **/
+  --gutter: var(--space-md);
+  /* --gutter-xs: var(--space-xs); */
+  /* --gutter-sm: var(--space-sm); */
+  /* --gutter-md: var(--space-md); */
+  /* --gutter-lg: var(--space-lg); */
+  /* --gutter-xl: var(--space-xl); */
+  /* --gutter-xxl: var(); */
+
+  /** Images **/
+  --thumbnail--padding: calc(var(--spacing) / 2);
+  --thumbnail--background: var(--gray-30);
+  --thumbnail--border-width: var(--border-width);
+  --thumbnail--border-color: var(--gray-40);
+  --thumbnail--border-radius: var(--border-radius);
+  --thumbnail--box-shadow: var(--box-shadow);
+  --thumbnail--transition: all 0.3s ease-in-out;
+  --polaroid--padding: calc(var(--spacing) * 3);
+  --figure--caption--font-size: 90%;
+  --figure--caption--font-color: var(--gray-60);
+  --figure--image--font-size: calc(var(--spacing) / 2);
+
+  /** Print **/
+  /* Inkline uses a Sass mixin to define print-specific styles */
+
+  /** Ratios **/
+  --scale-ratio: var(--scale-ratio--major-third);
+  --scale-ratio-secondary: var(--scale-ratio--augmented-fourth); 
+
+  /** Sizes **/
+  --size-percentage--0: 0%;
+  --size-percentage--25: 25%;
+  --size-percentage--50: 50%;
+  --size-percentage--75: 75%;
+  --size-percentage--100: 100%;
+  --size-multiplier: 1;
+  --size-multiplier--xs: var(--size-xs);
+  --size-multiplier--sm: var(--size-sm);
+  --size-multiplier--md: var(--size-md);
+  --size-multiplier--lg: var(--size-lg);
+  --size-multiplier--xl: var(--size-xl);
+
+  /** Spacing **/
+  --spacing: var(--space-md);
+  --margin: var(--inset-md);
+  --padding: var(--inset-md);
+
+  /** Typography **/
+  --font-family-primary--base: var(--fontFamily);
+  --font-family-primary--monospace: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-family-primary--print: 'Georgia', 'Times New Roman', 'Times', serif;
+  --font-family-secondary--base: var(--font-family-primary--base);
+  --font-family-secondary--monospace: var(--font-family-primary--monospace);
+  --font-family-secondary--print: var(--font-family-primary--print);
+  --letter-spacing: 0;
+  --font-size: var(--fontSizeBase);
+  --font-size--xs: var(--text-xs);
+  --font-size--sm: var(--text-sm);
+  --font-size--md: var(--text-md);
+  --font-size--lg: var(--text-lg);
+  --font-size--xl: var(--text-xl);
+  --line-height: var(--lineHeight-default);
+  --text-muted: var(--gray-60);
+  --font-weight--extralight: var(--fontWeight-extralight);
+  --font-weight--light: var(--fontWeight-light);
+  --font-weight--normal: var(--fontWeight-default);
+  --font-weight--semibold: 600;
+  --font-weight--bold: var(--fontWeight-bold);
+  --font-weight--black: var(--fontWeight-black);
+  --font-weight--lighter: lighter;
+  --font-weight--bolder: bolder;
+  --h1--font-size: var(--text-xxl);
+  --h2--font-size: var(--text-xl);
+  --h3--font-size: var(--text-lg);
+  --h4--font-size: var(--text-md);
+  --h5--font-size: var(--text-sm);
+  --h6--font-size: var(--text-xs);
+  --heading--margin-top: calc(var(--spacing) * 2.5);
+  --heading--margin-bottom: var(-spacing);
+  --heading--font-family: var(--font-family-secondary--base);
+  --heading--font-weight: var(--font-weight--semibold);
+  --heading--line-height: var(--lineHeight-display);
+  --heading--color: inherit;
+  --display--font-weight: var(--font-weight--semibold);
+  --display--line-height: var(--lineHeight-display);
+  --link--color: var(--link-primary);
+  --link--color--hover: var(--link-primary-hover);
+  --link--decoration: none;
+  --link--decoration--hover: underline;
+  --lead--font-size: var(--text-lg);
+  --lead--font-weight: var(--font-weight--light);
+  --list--item--padding--inline: var(--inline-md);
+  --list--item--margin-bottom: var(--stack-md);
+  --dt--font-weight: var(--font-weight--bold);
+  --small--font-size: var(--text-sm);
+  --small--font-weight: var(--font-weight--normal);
+  --blockquote--footer--color: var(--gray-60);
+  --blockquote--font-size: var(--text-lg);
+  --blockquote--border: var(--border-width) var(--border-style) var(--border-color);
+  --blockquote--margin: var(--inset-md);
+  --blockquote--padding--bordered: var(--inset-md);
+  --hr--border-color: var(--shade-20), rgba(0,0,0,0.1);
+  --hr--border-width: var(--border-width);
+  --hr--border-style: var(--border-style);
+  --hr--margin: var(--stack-md);
+  --mark--padding: var(--stretch-xs);
+  --mark--color: var(--gray-90);
+  --mark--background-color: var(--yellow-10);
+  --code--font-size: var(--text-md);
+  --code--padding: var(--stretch-sm);
+  --code--color: var(--gray-80);
+  --code--background: var(--gray-10);
+  --code--color--dark: var(--gray-10);
+  --code--background--dark: var(--gray-80);
+  --kbd--font-size: var(--text-md);
+  --kbd--box-shadow: inset var(--shadow-inner-x) var(--shadow-inner-y) var(--shadow-inner-blur) var(--shade-20);
+  --kbd--nested-font-weight: var(--font-weight--bold);
+  --kbd--padding: var(--code--padding);
+  --kbd--color: var(--neutrals-black);
+  --kbd--background: var(--gray-05);
+  --pre--font-size: var(--text-md);
+  --pre--color: var(--gray-90);
+  --pre--background: var(--neutrals-white);
+  --pre--scrollable-max-height: 340px;
+
+  /** Z-Index **/
+  --z-index--dropdown: 1000;
+  --z-index--sticky: 1020;
+  --z-index--fixed: 1030;
+  --z-index--modal-backdrop: 1040;
+  --z-index--modal: 1050;
+  --z-index--popover: 1060;
+  --z-index--tooltip: 1070;
+}

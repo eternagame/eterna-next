@@ -22,8 +22,19 @@ function parseTokensFromJSON(object: Record<string, any>, parent = '', tokens: R
     if (object[key].value) {
       const tokenName = (parent !== '') ? `--${parent}-${key}` : `--${key}`;
       const tokenValue = object[key].value;
-      // eslint-disable-next-line no-param-reassign
-      tokens[tokenName] = tokenValue;
+
+      // If the value is an object (like type or shadow), the token
+      // applies multiple properties and needs to be split up into
+      // separate rules for CSS.
+      if (typeof tokenValue === 'object') {
+        for (const property of Object.keys(tokenValue)) {
+          // eslint-disable-next-line no-param-reassign
+          tokens[`${tokenName}-${property}`] = tokenValue[property];
+        }
+      } else {
+        // eslint-disable-next-line no-param-reassign
+        tokens[tokenName] = tokenValue;
+      }
     } else {
       // If the object doesn't have a value property, it's a token group,
       // so parse that object for token definitions
@@ -81,15 +92,6 @@ export default function convertFile(inputPath: path.ParsedPath, outputPath: path
 
           cssFormattedOutput += `:root${theme ? `.${theme}` : ''} {\n`;
           Object.keys(tokens).forEach((tokenName) => {
-            // Hack to handle CSS font-family with fallback
-            // console.log(tokens[tokenName])
-            // FIXME: determine if Tokens Studio supports custom fields to avoid description parsing
-            if (tokenName === '--fontFamily') {
-              const cssRule = tokenSet.tokens['fontFamily'].description.split('font-family: ')[1];
-              // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-              cssFormattedOutput += convertTokenToCSSVariable(`\t${tokenName}: ${cssRule};\n`);
-              return;
-            }
             // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             cssFormattedOutput += convertTokenToCSSVariable(`\t${tokenName}: ${tokens[tokenName]};\n`);
           });
