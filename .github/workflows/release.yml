@@ -27,7 +27,7 @@ jobs:
     needs: release-please
     if: needs.release-please.outputs.releases_created != 'true' && needs.release-please.outputs.prs_exist != 'false'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: release-please--branches--main
           fetch-depth: 2
